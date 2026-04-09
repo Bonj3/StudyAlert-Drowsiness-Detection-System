@@ -18,7 +18,7 @@ If the EAR value falls below a predefined threshold for a certain number of cons
 
 Project Structure
 StudyAlert-Drowsiness-Detection-System/
-│
+|
 ├── main.py
 ├── requirements.txt
 ├── src/
