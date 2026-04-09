@@ -1,47 +1,56 @@
-# StudyAlert-Drowsiness-Detection-System
-StudyAlert-Drowsiness-Detection-System adalah sebuah sistem berbasis kecerdasan buatan yang dirancang untuk mendeteksi tingkat kantuk pengguna secara real-time selama aktivitas belajar. Dengan memanfaatkan teknologi computer vision dan analisis wajah, sistem ini mampu mengidentifikasi tanda-tanda kelelahan seperti mata tertutup, frekuensi kedipan, dan posisi kepala. Ketika tanda-tanda kantuk terdeteksi, sistem akan memberikan peringatan secara langsung untuk membantu pengguna tetap fokus dan produktif. Proyek ini ditujukan untuk meningkatkan efektivitas belajar, khususnya bagi mahasiswa atau pelajar yang sering mengalami kelelahan saat belajar dalam waktu lama.
+# StudyAlert – Drowsiness Detection System
 
-📖 Penjelasan Detail
-1. 🎯 Latar Belakang
+StudyAlert is a real-time drowsiness detection system designed to monitor user alertness during study sessions. The system utilizes computer vision techniques to detect signs of eye closure and reduced attention, providing timely warnings to help users stay focused and productive.
 
-Banyak pelajar dan mahasiswa mengalami penurunan konsentrasi akibat rasa kantuk saat belajar, terutama ketika belajar dalam durasi panjang atau di waktu malam. Hal ini dapat berdampak pada efektivitas belajar dan pemahaman materi. Oleh karena itu, diperlukan sebuah sistem otomatis yang mampu memonitor kondisi pengguna dan memberikan peringatan ketika terdeteksi tanda-tanda kelelahan.
+This project is built without heavy machine learning models, focusing instead on a lightweight and efficient approach using facial and eye detection combined with Eye Aspect Ratio (EAR) analysis. It is optimized for real-time performance and simplicity, making it suitable for students and developers who want to understand the fundamentals of vision-based alertness systems.
 
-2. 🧠 Tujuan Sistem
-Mendeteksi kondisi kantuk pengguna secara real-time
-Membantu pengguna menjaga fokus saat belajar
-Mengurangi risiko kehilangan konsentrasi
-Meningkatkan produktivitas dan efisiensi belajar
-3. ⚙️ Cara Kerja Sistem
+Features
+Real-time face and eye detection using webcam
+Eye Aspect Ratio (EAR) calculation for drowsiness detection
+Popup alert notification when drowsiness is detected
+Lightweight implementation without deep learning dependencies
+Simple and modular code structure
+How It Works
 
-Sistem bekerja dengan menggunakan kamera (webcam) untuk memantau wajah pengguna. Proses utama meliputi:
+The system captures video input from the webcam and processes each frame to detect the user's face and eyes. It then calculates the Eye Aspect Ratio (EAR) to determine whether the eyes are open or closed.
 
-Face Detection
-Sistem mendeteksi wajah pengguna menggunakan model computer vision.
-Eye Tracking & Blink Detection
-Mengamati kondisi mata (terbuka/tertutup) dan menghitung durasi kedipan.
-Drowsiness Detection
-Jika mata tertutup dalam waktu tertentu atau terdeteksi pola kantuk, sistem mengklasifikasikan pengguna dalam kondisi mengantuk.
-Alert System
-Sistem akan memberikan notifikasi berupa suara atau visual sebagai peringatan.
-4. 🛠️ Teknologi yang Digunakan
-Python sebagai bahasa pemrograman utama
-OpenCV untuk pengolahan citra dan video
-Dlib / Mediapipe untuk facial landmark detection
-NumPy untuk pengolahan data numerik
-Alarm System (Sound/Popup) untuk notifikasi
-5. 💡 Fitur Utama
-Deteksi kantuk secara real-time
-Monitoring mata dan wajah
-Sistem peringatan otomatis
-Ringan dan dapat dijalankan di laptop standar
-Cocok untuk pelajar, mahasiswa, maupun pekerja
-6. 📈 Manfaat
-Membantu menjaga fokus saat belajar
-Meningkatkan kualitas belajar
-Mengurangi kebiasaan belajar sambil mengantuk
-Dapat dikembangkan menjadi aplikasi edukasi yang lebih luas
-7. 🚀 Pengembangan Selanjutnya
-Integrasi dengan aplikasi e-learning
-Dashboard statistik tingkat fokus pengguna
-Notifikasi berbasis mobile
-Penggunaan AI model yang lebih akurat (deep learning)
+If the EAR value falls below a predefined threshold for a certain number of consecutive frames, the system classifies the user as drowsy and triggers a popup alert.
+
+Project Structure
+StudyAlert-Drowsiness-Detection-System/
+│
+├── main.py
+├── requirements.txt
+├── src/
+│   ├── detection/
+│   ├── core/
+│   ├── ui/
+├── models/
+└── assets/
+Requirements
+Python 3.x
+OpenCV
+NumPy
+
+Install dependencies:
+
+pip install -r requirements.txt
+Usage
+
+Run the application:
+
+python main.py
+
+Make sure your webcam is enabled. The system will start detecting your face and monitoring your eye state in real-time.
+
+Notes
+Detection accuracy may vary depending on lighting conditions
+Works best in a well-lit environment with a clear view of the face
+Designed for educational and experimental purposes
+Future Improvements
+Add study session tracking and analytics
+Improve detection robustness under different conditions
+Integrate a graphical user interface
+License
+
+This project is open-source and available for educational use.
