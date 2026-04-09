@@ -1,4 +1,4 @@
-# DrowsyGuard-Real-Time-Driver-Drowsiness-Detection-System
+# StudyAlert-Drowsiness-Detection-System
 StudyAlert-Drowsiness-Detection-System adalah sebuah sistem berbasis kecerdasan buatan yang dirancang untuk mendeteksi tingkat kantuk pengguna secara real-time selama aktivitas belajar. Dengan memanfaatkan teknologi computer vision dan analisis wajah, sistem ini mampu mengidentifikasi tanda-tanda kelelahan seperti mata tertutup, frekuensi kedipan, dan posisi kepala. Ketika tanda-tanda kantuk terdeteksi, sistem akan memberikan peringatan secara langsung untuk membantu pengguna tetap fokus dan produktif. Proyek ini ditujukan untuk meningkatkan efektivitas belajar, khususnya bagi mahasiswa atau pelajar yang sering mengalami kelelahan saat belajar dalam waktu lama.
 
 📖 Penjelasan Detail
